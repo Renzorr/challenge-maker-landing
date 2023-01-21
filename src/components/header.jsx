@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <a href="#">
-        <img loading="lazy" src={logo} alt="logo" />
+        <img src={logo} alt="logo" />
       </a>
     </header>
   );

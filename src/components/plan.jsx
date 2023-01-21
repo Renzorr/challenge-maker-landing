@@ -28,15 +28,15 @@ function Plan() {
         affordable, and it’s completely free to get started.
       </p>
 
-      <div className="plan_card_section">
+      <section className="plan_card_section">
         <div className="plan_card free">
           <img src={free} alt="" aria-hidden="true" className="logo" />
-          <span className="plan_card_title">Dip your toe</span>
+          <h3 className="plan_card_title">Dip your toe</h3>
           <p className="plan_card_content_free">
             Just getting started? No problem at all! Our free plan will take you
             a long way.
           </p>
-          <h3 className="plan_card_m_title_free">Free</h3>
+          <h4 className="plan_card_m_title_free">Free</h4>
           <ul className="plan_card_features">
             <li>
               <img src={checkCyan} alt="" aria-hidden="true" />
@@ -59,13 +59,13 @@ function Plan() {
 
         <div className="plan_card paid">
           <img src={paid} alt="" aria-hidden="true" className="logo" />
-          <span className="plan_card_title">Dive right in</span>
+          <h3 className="plan_card_title">Dive right in</h3>
           <p className="plan_card_content_paid">
             Ready for the big time? Our paid plan will help you take your
             business to the next level.
           </p>
           <div className="plan_card_price">
-            <h3>$25.00</h3>
+            <h4>$25.00</h4>
             <span>/ month</span>
           </div>
 
@@ -88,7 +88,7 @@ function Plan() {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </motion.section>
   );
 }
