@@ -1,4 +1,14 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const animateContact = {
+  offscreen: { x: 100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -18,7 +28,13 @@ function Contact() {
   };
 
   return (
-    <section className="contact">
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 1 }}
+      variants={animateContact}
+      className="contact"
+    >
       <h3 className="contact_title">Get notified when we launch</h3>
       <div className="contact_area">
         <div className="input_area">
@@ -35,7 +51,7 @@ function Contact() {
           Get notified
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

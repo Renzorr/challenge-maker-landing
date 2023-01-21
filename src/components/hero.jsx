@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
 
+const animateHero = {
+  offscreen: { y: -100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
+
 function Hero() {
   return (
-    <main className="hero">
+    <motion.main
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 1 }}
+      variants={animateHero}
+      className="hero"
+    >
       <div className="hero_content">
         <h1 className="hero_title">
           Get paid for the work you <span>love</span> to do.
@@ -25,7 +40,7 @@ function Hero() {
                 y: [0, 14, 0],
               }}
               transition={{
-                duration: 4,
+                duration: 3,
                 repeat: Infinity,
               }}
               width="4"
@@ -37,7 +52,7 @@ function Hero() {
           </g>
         </svg>
       </div>
-    </main>
+    </motion.main>
   );
 }
 

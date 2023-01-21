@@ -2,10 +2,26 @@ import free from "../assets/icon-free.svg";
 import paid from "../assets/icon-paid.svg";
 import checkCyan from "../assets/icon-check-cyan.svg";
 import check from "../assets/icon-check.svg";
+import { motion } from "framer-motion";
+
+const animatePlan = {
+  offscreen: { y: 100, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
 
 function Plan() {
   return (
-    <section className="plan">
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 1 }}
+      variants={animatePlan}
+      className="plan"
+    >
       <h2 className="plan_title">Our pricing plans</h2>
       <p className="plan_info">
         We only make money when our creators make money. Our plans are always
@@ -14,7 +30,7 @@ function Plan() {
 
       <div className="plan_card_section">
         <div className="plan_card free">
-          <img src={free} alt="" aria-hidden="true" className="logo"/>
+          <img src={free} alt="" aria-hidden="true" className="logo" />
           <span className="plan_card_title">Dip your toe</span>
           <p className="plan_card_content_free">
             Just getting started? No problem at all! Our free plan will take you
@@ -42,7 +58,7 @@ function Plan() {
         </div>
 
         <div className="plan_card paid">
-          <img src={paid} alt="" aria-hidden="true" className="logo"/>
+          <img src={paid} alt="" aria-hidden="true" className="logo" />
           <span className="plan_card_title">Dive right in</span>
           <p className="plan_card_content_paid">
             Ready for the big time? Our paid plan will help you take your
@@ -73,7 +89,7 @@ function Plan() {
           </ul>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

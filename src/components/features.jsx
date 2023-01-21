@@ -2,10 +2,26 @@ import passion from "../assets/illustration-passions.svg";
 import finance from "../assets/illustration-financial-freedom.svg";
 import lifestyle from "../assets/illustration-lifestyle.svg";
 import work from "../assets/illustration-work-anywhere.svg";
+import { motion } from "framer-motion";
+
+const animateFeatures = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
 
 function Features() {
   return (
-    <section className="features">
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 1 }}
+      variants={animateFeatures}
+      className="features"
+    >
       <div className="features_card">
         <picture>
           <img
@@ -77,7 +93,7 @@ function Features() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
