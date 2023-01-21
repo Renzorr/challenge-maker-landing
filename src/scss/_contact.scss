@@ -1,0 +1,70 @@
+@use "./variables" as v;
+
+.contact {
+  margin-block: 205px 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact_title {
+  font-size: 32px;
+  color: v.$white;
+}
+
+.contact_area {
+  margin-top: 43px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+input {
+  border-radius: 50px;
+  width: 100%;
+  padding: 15px 15px 15px 20px;
+  font-size: 15px;
+  background-color: v.$blue;
+  color: v.$gray;
+  position: relative;
+
+  &::placeholder {
+    color: v.$gray;
+  }
+}
+
+.input_area {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.error {
+  font-size: 13px;
+  padding-left: 20px;
+  color: red;
+}
+
+.submit_btn {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: v.$cyan;
+  color: v.$blue;
+  padding: 13px 25px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: v.$cyan;
+    border: 2px solid v.$cyan;
+    background-color: transparent;
+  }
+}

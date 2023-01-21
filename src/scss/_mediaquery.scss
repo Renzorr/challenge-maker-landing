@@ -1,0 +1,74 @@
+@media (max-width: 900px) {
+  .header {
+    padding-inline: inherit !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero {
+    background-size: 52%, 52%;
+    padding-top: 215px;
+    margin-top: 120px;
+  }
+
+  .hero_title {
+    font-size: 40px;
+    width: 90%;
+  }
+
+  .hero_info {
+    width: 90%;
+  }
+
+  .features {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 75px;
+  }
+
+  .features_picture {
+    &.passion {
+      padding: 20px 35px;
+    }
+  }
+
+  .plan {
+    padding: 20px;
+  }
+
+  .plan_card_section {
+    flex-direction: column;
+  }
+
+  .plan_title {
+    font-size: 36px;
+  }
+
+  .plan_info {
+    width: 90%;
+  }
+
+  .paid {
+    max-width: 410px;
+  }
+
+  .contact {
+    padding: 20px;
+  }
+
+  .contact_area {
+    align-items: center !important;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .input_area {
+    width: 100% !important;
+    max-width: inherit;
+  }
+
+  .submit_btn {
+    width: 100%;
+  }
+}

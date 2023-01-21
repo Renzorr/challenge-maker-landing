@@ -1,0 +1,56 @@
+@use "./variables" as v;
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 182px;
+}
+
+.features_card {
+  max-width: 240px;
+  text-align: center;
+
+  &.bottom {
+    margin-top: 50px;
+  }
+}
+
+.features_picture {
+  background-color: v.$blue;
+  border-radius: 45px;
+
+  &.passion {
+    padding: 30px 35px;
+    margin-bottom: 42px;
+  }
+
+  &.finance {
+    padding: 40px 43px;
+    margin-bottom: 38px;
+  }
+
+  &.lifestyle {
+    padding: 37px 40px;
+    margin-bottom: 40px;
+  }
+
+  &.work {
+    padding: 40px 30px;
+    margin-bottom: 50px;
+  }
+}
+
+.features_content {
+  span {
+    font-size: 18.5px;
+    font-weight: 800;
+    color: v.$white;
+  }
+
+  p {
+    font-size: 15.5px;
+    margin-top: 22px;
+    color: v.$gray;
+  }
+}

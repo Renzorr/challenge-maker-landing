@@ -1,0 +1,111 @@
+@use "./variables" as v;
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 209px;
+}
+
+.plan_title {
+  font-size: 32px;
+  color: v.$white;
+}
+
+.plan_info {
+  margin-top: 26px;
+  width: 38%;
+  color: v.$gray;
+}
+
+.plan_card_section {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.plan_card {
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.free {
+  margin-top: 70px;
+  width: 100%;
+  max-width: 410px;
+  background-color: v.$blue;
+  color: v.$white;
+
+  .logo {
+    margin-top: -55px;
+  }
+}
+
+.plan_card_title {
+  margin-top: 27px;
+  font-size: 17.5px;
+  font-weight: 800;
+}
+
+.plan_card_content_free {
+  margin-top: 22px;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.plan_card_m_title_free {
+  margin-top: 32px;
+  font-size: 38px;
+}
+
+.plan_card_features {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 20px;
+
+  li {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+
+.paid {
+  background-color: v.$cyan;
+  color: v.$blue;
+  margin-top: 60px;
+  padding: 40px;
+
+  .logo {
+    margin-top: -70px;
+  }
+}
+
+.plan_card_content_paid {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.plan_card_price {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  h3 {
+    font-size: 40px;
+  }
+}
+
