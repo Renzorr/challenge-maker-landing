@@ -18,7 +18,7 @@ function Plan() {
     <motion.section
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: true, amount: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={animatePlan}
       className="plan"
     >

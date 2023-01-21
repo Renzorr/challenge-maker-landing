@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 
-const animateHero = {
-  offscreen: { y: -100, opacity: 0 },
+const animate = {
+  offscreen: { opacity: 0 },
   onscreen: {
-    y: 0,
     opacity: 1,
-    transition: { duration: 1 },
+    duration: 2,
   },
 };
 
@@ -14,8 +13,8 @@ function Hero() {
     <motion.main
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: true, amount: 1 }}
-      variants={animateHero}
+      viewport={{ once: true }}
+      variants={animate}
       className="hero"
     >
       <div className="hero_content">

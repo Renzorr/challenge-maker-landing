@@ -2,9 +2,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const animateContact = {
-  offscreen: { x: 100, opacity: 0 },
+  offscreen: { y: 100, opacity: 0 },
   onscreen: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: { duration: 1 },
   },
@@ -31,7 +31,7 @@ function Contact() {
     <motion.section
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: true, amount: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={animateContact}
       className="contact"
     >

@@ -18,7 +18,7 @@ function Features() {
     <motion.section
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: true, amount: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={animateFeatures}
       className="features"
     >
