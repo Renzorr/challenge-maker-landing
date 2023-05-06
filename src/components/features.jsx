@@ -1,25 +1,18 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../motion/motion";
+
 import passion from "../assets/illustration-passions.svg";
 import finance from "../assets/illustration-financial-freedom.svg";
 import lifestyle from "../assets/illustration-lifestyle.svg";
 import work from "../assets/illustration-work-anywhere.svg";
-import { motion } from "framer-motion";
-
-const animateFeatures = {
-  offscreen: { x: -100, opacity: 0 },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 1 },
-  },
-};
 
 function Features() {
   return (
     <motion.section
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.3 }}
-      variants={animateFeatures}
+      variants={fadeIn("right", "spring", 0, 1.5)}
+      initial={"hidden"}
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
       className="features"
     >
       <div className="features_card">

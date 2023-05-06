@@ -1,25 +1,18 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../motion/motion";
+
 import free from "../assets/icon-free.svg";
 import paid from "../assets/icon-paid.svg";
 import checkCyan from "../assets/icon-check-cyan.svg";
 import check from "../assets/icon-check.svg";
-import { motion } from "framer-motion";
-
-const animatePlan = {
-  offscreen: { y: 100, opacity: 0 },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 1 },
-  },
-};
 
 function Plan() {
   return (
     <motion.section
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.2 }}
-      variants={animatePlan}
+      variants={fadeIn("right", "spring", 0, 1.5)}
+      initial={"hidden"}
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
       className="plan"
     >
       <h2 className="plan_title">Our pricing plans</h2>

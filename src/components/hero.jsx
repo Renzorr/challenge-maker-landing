@@ -1,20 +1,13 @@
 import { motion } from "framer-motion";
-
-const animate = {
-  offscreen: { opacity: 0 },
-  onscreen: {
-    opacity: 1,
-    duration: 2,
-  },
-};
+import { appearIn } from "../motion/motion";
 
 function Hero() {
   return (
     <motion.main
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true }}
-      variants={animate}
+      variants={appearIn}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
       className="hero"
     >
       <div className="hero_content">

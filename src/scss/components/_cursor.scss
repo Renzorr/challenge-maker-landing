@@ -1,0 +1,32 @@
+@use "../variables/variables" as v;
+
+.main-cursor,
+.secondary-cursor {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 999;
+  border-radius: 50%;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.main-cursor {
+  background-color: v.$cyan;
+  width: 20px;
+  height: 20px;
+}
+
+.secondary-cursor {
+  border: 2px solid v.$gray;
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .main-cursor,
+  .secondary-cursor {
+    display: none;
+  }
+}

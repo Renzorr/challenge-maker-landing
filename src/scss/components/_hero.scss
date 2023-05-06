@@ -1,10 +1,10 @@
-@use "./variables" as v;
+@use "../variables/variables" as v;
 
 .hero {
   text-align: center;
   width: 100%;
-  background: url("../assets/illustration-hero-right.svg"),
-    url("../assets/illustration-hero-left.svg");
+  background: url("../../assets/illustration-hero-right.svg"),
+    url("../../assets/illustration-hero-left.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left 58vw top 0vh, right 57vw top 0vh;
   margin-top: 115px;

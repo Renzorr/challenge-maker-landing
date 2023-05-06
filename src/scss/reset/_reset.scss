@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../variables/variables";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
 
 *,
@@ -9,6 +9,7 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+  // cursor: none;
 }
 
 html:focus-within {

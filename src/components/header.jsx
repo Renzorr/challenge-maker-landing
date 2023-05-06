@@ -1,12 +1,20 @@
 import logo from "../assets/logo.svg";
+import { motion } from "framer-motion";
+import { appearIn } from "../motion/motion";
 
 function Header() {
   return (
-    <header className="header">
+    <motion.header
+      variants={appearIn}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="header"
+    >
       <a href="#">
         <img src={logo} alt="logo" />
       </a>
-    </header>
+    </motion.header>
   );
 }
 

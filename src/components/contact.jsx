@@ -1,14 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { fadeIn } from "../motion/motion";
 
-const animateContact = {
-  offscreen: { y: 100, opacity: 0 },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 1 },
-  },
-};
+import { useState } from "react";
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -29,10 +22,10 @@ function Contact() {
 
   return (
     <motion.section
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.2 }}
-      variants={animateContact}
+      variants={fadeIn("up", "spring", 0, 1.5)}
+      initial={"hidden"}
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
       className="contact"
     >
       <h3 className="contact_title">Get notified when we launch</h3>
